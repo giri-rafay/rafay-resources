@@ -5,7 +5,10 @@ metadata:
   project: giri-test-labels
 spec:
   artifact:
-    artifact: {}
+    artifact:
+      paths:
+      - name: file://artifacts/addon2/netpol-k8s.yaml
     type: Yaml
   namespace: addon-ns1
   sharing: {}
+  version: v1
