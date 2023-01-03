@@ -13,4 +13,4 @@ spec:
     type: Yaml
   namespace: addon-ns1
   sharing: {}
-  version: v1
+  version: v2
