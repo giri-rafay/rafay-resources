@@ -1,0 +1,11 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Addon
+metadata:
+  name: addon2
+  project: giri-test-labels
+spec:
+  artifact:
+    artifact: {}
+    type: Yaml
+  namespace: addon-ns1
+  sharing: {}
