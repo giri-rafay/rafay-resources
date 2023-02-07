@@ -5,4 +5,9 @@ metadata:
   project: giri-test-labels
 spec:
   repository: default-bitnami
+  sharing:
+    enabled: true
+    projects:
+    - name: giri
+    - name: giri-np
   type: HelmRepository
