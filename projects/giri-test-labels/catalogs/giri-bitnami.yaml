@@ -1,0 +1,8 @@
+apiVersion: apps.k8smgmt.io/v3
+kind: Catalog
+metadata:
+  name: giri-bitnami
+  project: giri-test-labels
+spec:
+  repository: default-bitnami
+  type: HelmRepository
