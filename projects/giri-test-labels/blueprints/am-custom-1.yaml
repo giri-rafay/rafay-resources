@@ -1,0 +1,28 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Blueprint
+metadata:
+  name: am-custom-1
+  project: giri-test-labels
+spec:
+  base:
+    name: jan20-gold
+    version: v2
+  defaultAddons:
+    enableIngress: true
+    enableMonitoring: true
+  networkPolicy:
+    enabled: true
+    policies:
+    - name: pol1
+      version: v1
+    - name: pol2
+      version: v1
+    - name: pol2
+      version: v1
+    - name: pol1
+      version: v1
+    profile:
+      name: example-profile-123
+      version: example-version
+  type: custom
+  version: v2

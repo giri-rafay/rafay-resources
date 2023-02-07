@@ -1,0 +1,15 @@
+apiVersion: apps.k8smgmt.io/v3
+kind: Workload
+metadata:
+  name: web
+  project: giri-test-labels
+spec:
+  artifact:
+    artifact:
+      paths:
+      - name: file://artifacts/web/web.yaml
+    type: Yaml
+  namespace: cilium-test
+  placement:
+    selector: rafay.dev/clusterName=giri-mks-canal
+  version: web-v2

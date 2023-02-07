@@ -1,0 +1,22 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Blueprint
+metadata:
+  name: mks-bp
+  project: giri-test-labels
+spec:
+  base:
+    name: default-upstream
+    version: 1.22.0
+  defaultAddons:
+    enableIngress: true
+    enableMonitoring: true
+    enableRookCeph: true
+  namespaceConfig:
+    enableSync: true
+  networkPolicy:
+    enabled: true
+    profile:
+      name: new
+      version: v11
+  type: custom
+  version: v1

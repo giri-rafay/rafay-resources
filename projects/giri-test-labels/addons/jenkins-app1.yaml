@@ -1,0 +1,15 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Addon
+metadata:
+  name: jenkins-app1
+  project: giri-test-labels
+spec:
+  artifact:
+    artifact:
+      catalog: default-bitnami
+      chartName: jenkins
+      chartVersion: 11.0.12
+    type: Helm
+  namespace: jenkins
+  sharing: {}
+  version: v1

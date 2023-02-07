@@ -1,0 +1,15 @@
+apiVersion: servicemesh.k8smgmt.io/v3
+kind: ClusterMeshRule
+metadata:
+  name: mesh-rule-4
+  project: giri-test-labels
+spec:
+  artifact:
+    artifact:
+      paths:
+      - name: dir-12/projects/giri-test-labels/cluster-permissive-mtls.yaml
+      repository: new-repo-1
+      revision: main
+    options: {}
+    type: Yaml
+  version: example-version-1

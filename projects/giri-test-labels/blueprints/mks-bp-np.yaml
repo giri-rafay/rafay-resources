@@ -1,0 +1,19 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Blueprint
+metadata:
+  name: mks-bp-np
+  project: giri-test-labels
+spec:
+  base:
+    name: default
+    version: 1.22.0
+  networkPolicy:
+    enabled: true
+    policies:
+    - name: generic-policy
+      version: version1
+    profile:
+      name: default
+      version: latest
+  type: custom
+  version: v10

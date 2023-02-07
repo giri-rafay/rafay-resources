@@ -1,0 +1,16 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Blueprint
+metadata:
+  name: patch
+  project: giri-test-labels
+spec:
+  base:
+    name: default-upstream
+    version: 1.22.0
+  defaultAddons:
+    csiSecretStoreConfig:
+      providers: {}
+    enableCsiSecretStore: true
+    enableMonitoring: true
+  type: custom
+  version: v19

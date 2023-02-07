@@ -1,0 +1,15 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Addon
+metadata:
+  name: mysql-app1
+  project: giri-test-labels
+spec:
+  artifact:
+    artifact:
+      catalog: default-bitnami
+      chartName: mysql
+      chartVersion: 9.4.6
+    type: Helm
+  namespace: mysql
+  sharing: {}
+  version: v1

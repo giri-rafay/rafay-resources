@@ -1,0 +1,7 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Blueprint
+metadata:
+  name: am-custom-2
+  project: giri-test-labels
+spec:
+  type: custom

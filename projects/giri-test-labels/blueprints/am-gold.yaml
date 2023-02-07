@@ -1,0 +1,19 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Blueprint
+metadata:
+  name: am-gold
+  project: giri-test-labels
+spec:
+  base:
+    name: default-aks
+    version: 1.22.0
+  defaultAddons:
+    enableIngress: true
+    enableMonitoring: true
+  networkPolicy:
+    enabled: true
+    profile:
+      name: new
+      version: v11
+  type: golden
+  version: v1

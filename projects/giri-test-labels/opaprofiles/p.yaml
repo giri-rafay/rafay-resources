@@ -1,0 +1,20 @@
+apiVersion: opa.k8smgmt.io/v3
+kind: OPAProfile
+metadata:
+  name: p
+  project: giri-test-labels
+spec:
+  excludedNamespaces:
+  - namespaces:
+    - name: cilium-test
+    - name: cilium-test
+    - name: cilium-test
+    processes:
+    - '*'
+  installationParams:
+    auditInterval: 60
+    constraintViolationsLimit: 20
+  opaVersion: 3.11.0
+  syncObjects:
+  - {}
+  version: v2

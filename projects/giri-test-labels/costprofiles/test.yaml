@@ -1,0 +1,16 @@
+apiVersion: cost.k8smgmt.io/v3
+kind: CostProfile
+metadata:
+  name: test
+  project: giri-test-labels
+spec:
+  installationParams:
+    azure:
+      customPricing:
+        cloudCredentialsName: giri-aks
+  providerType: azure
+  sharing:
+    enabled: true
+    projects:
+    - name: amrish
+  version: v1

@@ -1,0 +1,17 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Blueprint
+metadata:
+  name: infra-admin
+  project: giri-test-labels
+spec:
+  base:
+    name: default
+    version: 1.22.0
+  customAddons:
+  - name: postgres-app
+    version: postgres-v2
+  defaultAddons:
+    enableIngress: true
+    enableMonitoring: true
+  type: custom
+  version: infra-v1

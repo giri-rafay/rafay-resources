@@ -1,0 +1,10 @@
+apiVersion: security.k8smgmt.io/v3
+kind: NamespaceNetworkPolicy
+metadata:
+  name: xwing-blocker-policy1
+  project: giri-test-labels
+spec:
+  rules:
+  - name: xwing-blocker
+    version: version1
+  version: v1

@@ -1,0 +1,17 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Addon
+metadata:
+  labels:
+    app: postgress
+  name: postgres-app
+  project: giri-test-labels
+spec:
+  artifact:
+    artifact:
+      catalog: default-bitnami
+      chartName: postgresql
+      chartVersion: 12.1.9
+    type: Helm
+  namespace: postgres
+  sharing: {}
+  version: postgres-v2

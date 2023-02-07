@@ -1,0 +1,10 @@
+apiVersion: security.k8smgmt.io/v3
+kind: ClusterNetworkPolicy
+metadata:
+  name: generic-policy
+  project: giri-test-labels
+spec:
+  rules:
+  - name: generic-rule
+    version: clusterwide
+  version: version1

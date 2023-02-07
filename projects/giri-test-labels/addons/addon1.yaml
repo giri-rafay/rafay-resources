@@ -1,6 +1,18 @@
 apiVersion: infra.k8smgmt.io/v3
 kind: Addon
 metadata:
+  labels:
+    K8S: ""
+    dev: testing
+    k8smgmt.com/key11: value1
+    k8smgmt.io/name: addon1
+    k8smgmt.io/name1: addon1
+    k8smgmt.io/name2: addon2
+    k8smgmt.io/name3: addon3
+    k8smgmt.io/test: fdsf
+    k8smgmt.io/test.io: value1
+    key: value2
+    kunernetes.io/test: fdsfsd
   name: addon1
   project: giri-test-labels
 spec:
@@ -10,8 +22,5 @@ spec:
       - name: file://artifacts/addon1/mysql-deployment.yaml
     type: Yaml
   namespace: addon-ns1
-  sharing:
-    enabled: true
-    projects:
-    - name: giri-shared
-  version: version1
+  sharing: {}
+  version: version3

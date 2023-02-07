@@ -1,0 +1,19 @@
+apiVersion: gitops.k8smgmt.io/v3
+kind: Pipeline
+metadata:
+  name: giri-pipeline1
+  project: giri-test-labels
+spec:
+  stages:
+  - config:
+      destinationRepo: {}
+      gitToSystemSync: true
+      includedResources:
+      - name: '*'
+      sourceAsDestination: true
+      sourceRepo:
+        repository: rafay-resources
+        revision: main
+      systemToGitSync: true
+    name: test
+    type: SystemSync

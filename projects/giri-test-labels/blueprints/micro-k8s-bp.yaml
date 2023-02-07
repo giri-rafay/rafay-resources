@@ -1,0 +1,27 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Blueprint
+metadata:
+  name: micro-k8s-bp
+  project: giri-test-labels
+spec:
+  base:
+    name: default
+    version: 1.22.0
+  customAddons:
+  - name: mysql-app
+    version: mysql-v1
+  - name: postgres-app
+    version: postgres-v1
+  defaultAddons:
+    enableIngress: true
+    enableMonitoring: true
+  networkPolicy:
+    enabled: true
+    policies:
+    - name: pol2
+      version: v1
+    profile:
+      name: default
+      version: latest
+  type: custom
+  version: micro-v4

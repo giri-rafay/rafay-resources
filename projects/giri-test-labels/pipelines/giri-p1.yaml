@@ -1,0 +1,10 @@
+apiVersion: gitops.k8smgmt.io/v3
+kind: Pipeline
+metadata:
+  name: giri-p1
+  project: giri-test-labels
+spec:
+  sharing:
+    enabled: true
+    projects:
+    - name: '*'

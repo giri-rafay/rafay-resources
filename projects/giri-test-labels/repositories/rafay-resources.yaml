@@ -1,0 +1,16 @@
+apiVersion: integrations.k8smgmt.io/v3
+kind: Repository
+metadata:
+  name: rafay-resources
+  project: giri-test-labels
+spec:
+  agents:
+  - name: agen007
+  credentials:
+    password: sealed://credentials.password
+    username: giri-rafay
+  endpoint: https://github.com/giri-rafay/rafay-resources.git
+  secret:
+    name: file://artifacts/rafay-resources/sealed-secret.yaml
+  sharing: {}
+  type: Git

@@ -1,0 +1,12 @@
+apiVersion: gitops.k8smgmt.io/v3
+kind: Agent
+metadata:
+  name: agen007
+  project: giri-test-labels
+spec:
+  active: true
+  cluster:
+    name: giri-mks-canal
+  sharing: {}
+  type: Cluster
+  version: r1.22.0

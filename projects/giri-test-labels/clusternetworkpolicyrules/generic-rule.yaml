@@ -1,0 +1,13 @@
+apiVersion: security.k8smgmt.io/v3
+kind: ClusterNetworkPolicyRule
+metadata:
+  name: generic-rule
+  project: giri-test-labels
+spec:
+  artifact:
+    artifact:
+      paths:
+      - name: file://artifacts/generic-rule/cluster-wide.yaml
+    options: {}
+    type: Yaml
+  version: clusterwide

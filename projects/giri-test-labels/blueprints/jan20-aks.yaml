@@ -1,0 +1,22 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Blueprint
+metadata:
+  name: jan20-aks
+  project: giri-test-labels
+spec:
+  base:
+    name: default-aks
+    version: 1.22.0
+  defaultAddons:
+    enableIngress: true
+    enableMonitoring: true
+  networkPolicy:
+    enabled: true
+    policies:
+    - name: generic-policy
+      version: version1
+    profile:
+      name: default
+      version: latest
+  type: custom
+  version: version3

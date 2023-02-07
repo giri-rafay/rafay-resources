@@ -1,0 +1,10 @@
+apiVersion: opa.k8smgmt.io/v3
+kind: OPAPolicy
+metadata:
+  name: pol1
+  project: giri-test-labels
+spec:
+  constraintList:
+  - name: read-only-root-filesystem
+    version: version-1672854643
+  version: v1

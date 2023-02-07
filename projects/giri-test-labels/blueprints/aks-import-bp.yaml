@@ -1,0 +1,21 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Blueprint
+metadata:
+  name: aks-import-bp
+  project: giri-test-labels
+spec:
+  base:
+    name: default-aks
+    version: 1.22.0
+  customAddons:
+  - name: mysql-app
+    version: zipped-3
+  - dependsOn:
+    - mysql-app
+    name: jenkins-app
+    version: jenkins-v3
+  defaultAddons:
+    enableIngress: true
+    enableMonitoring: true
+  type: custom
+  version: v11

@@ -1,0 +1,18 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Addon
+metadata:
+  labels:
+    app: joomla
+    app1: joomla1
+  name: joomla-app
+  project: giri-test-labels
+spec:
+  artifact:
+    artifact:
+      catalog: default-bitnami
+      chartName: joomla
+      chartVersion: 13.3.13
+    type: Helm
+  namespace: joomla
+  sharing: {}
+  version: joomla-v2
